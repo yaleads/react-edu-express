@@ -6,7 +6,13 @@ class Check extends Component {
   }
 
   render() {
-    console.log(this.props);
+    const check = {
+      items: [
+        {id: 1, name: 'Item 1', count: 10, price: 100},
+        {id: 2, name: 'Item 2', count: 3,  price: 50},
+        {id: 3, name: 'Item 3', count: 1,  price: 1000},
+      ]
+    };
 
     return (
       <table>
@@ -20,7 +26,7 @@ class Check extends Component {
         </thead>
         <tbody>
           {
-            this.props.check.items.map ( item =>
+            check.items.map ( item =>
              <tr key={item.id}>
                 <td>{item.name}</td>
                 <td>{item.count}</td>
@@ -33,7 +39,7 @@ class Check extends Component {
         <tfoot>
           <tr>
             <td colSpan={3}>Total</td>
-            <td>{this.props.check.items.reduce((prev,next) => prev + next.count * next.price, 0)}</td>
+            <td>{check.items.reduce((prev,next) => prev + next.count * next.price, 0)}</td>
           </tr>
         </tfoot>
       </table>
