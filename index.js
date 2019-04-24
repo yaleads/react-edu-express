@@ -9,18 +9,18 @@ console.log(`5 * 4 = ${math_mult(5, 4)}`);
 console.log(`90 / 5 = ${math_div(90, 5)}`);
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-    render() {
-        return (
-            <div>Hello World!</div>
-        );
-    }
+  render() {
+    return (
+      <div>Hello World!</div>
+    );
+  }
 }
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('root')
+  <App />,
+  document.getElementById('root')
 );
