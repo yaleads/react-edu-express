@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import Products from '~/src/constants/Products'
-import ProductCard from "./src/components/ProductCard";
+import ProductCatalog from "./src/components/ProductCatalog";
 
 class App extends Component {
   constructor(props) {
@@ -13,13 +13,7 @@ class App extends Component {
     return (
       <div className='container'>
         <h1>React App</h1>
-
-        {
-          Products().map((product) =>
-            <ProductCard product={product} key={product.id} />
-          )
-        }
-
+        <ProductCatalog products={ Products() } />
       </div>
     );
   }
