@@ -1,22 +1,12 @@
-import React from 'react'
-import Products from '~/src/constants/Products'
+import React from 'react';
 import ProductCatalog from "./ProductCatalog";
 
-class CatalogPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { products: Products() };
-  }
-
-  render() {
-    console.log(this.state.products);
-
-    return (
-      <div>
-        <ProductCatalog products={this.state.products} />
-      </div>
-    )
-  }
+function CatalogPage(props) {
+  return (
+    <div>
+      <ProductCatalog products={props.products} />
+    </div>
+  )
 }
 
 export default CatalogPage;
