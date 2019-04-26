@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import math_info, {sum as math_sum, dif as math_dif, mult as math_mult, div as math_div} from '~/src/Math'
-
-math_info();
-console.log(`3 + 4 = ${math_sum(3, 4)}`);
-console.log(`5 - 4 = ${math_dif(5, 4)}`);
-console.log(`5 * 4 = ${math_mult(5, 4)}`);
-console.log(`90 / 5 = ${math_div(90, 5)}`);
+import Image from '~/src/components/image'
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +11,7 @@ class App extends Component {
     return (
       <div>
         <h1>Hello World!</h1>
+        <p><Image height='100' width='100' alt={'The Road to learn React'} src={'https://images-na.ssl-images-amazon.com/images/I/41JvDSREHWL._SX384_BO1,204,203,200_.jpg'}/></p>
       </div>
     );
   }
