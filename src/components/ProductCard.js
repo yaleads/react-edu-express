@@ -1,7 +1,7 @@
 import React from 'react'
-import Image from '~/src/components/Image'
-import TextBox from '~/src/components/TextBox'
-import Price from '~/src/components/Price'
+import Image from './Image'
+import TextBox from './TextBox'
+import Price from './Price'
 
 function ProductCard(props){
   return (
