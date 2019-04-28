@@ -1,11 +1,17 @@
 const express = require('express');
 
+require.extensions['.css'] = () => {
+  return;
+};
+
 require('@babel/register');
 require('@babel/polyfill');
 
 const render = require('./render').default;
 
 const app = express();
+
+
 
 
 app.get('/', async (req, res) => {
